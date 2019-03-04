@@ -16,7 +16,7 @@ class CampusWebController: WebViewController {
         }
         
         let viewController = CampusWebController(url: url)
-        viewController.tabBarItem = UITabBarItem(title: "CampusSquare", image: UIImage(named: "CampusSquare"), tag: 0)
+        viewController.tabBarItem = UITabBarItem(title: "学務システム", image: UIImage(named: "CampusSquare"), tag: 0)
         return viewController
     }
 }
