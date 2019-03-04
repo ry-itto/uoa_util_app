@@ -16,8 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [
+            CampusWebController.createWithTabBarItem(),
+        ]
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = ViewController()
+        window.rootViewController = tabBarController
         self.window = window
         self.window?.makeKeyAndVisible()
         
