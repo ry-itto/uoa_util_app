@@ -14,6 +14,11 @@ class WebViewController: UIViewController {
     let url: URL
     let webView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
     
+    let backButton = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector(back))
+    let forwardButton = UIBarButtonItem(title: ">", style: .plain, target: self, action: #selector(forward))
+    let openWithSafari = UIBarButtonItem(title: "Safariで開く", style: .plain, target: self, action: #selector(safari))
+    var observations: [NSKeyValueObservation] = []
+    
     init(url: URL) {
         self.url = url
         super.init(nibName: nil, bundle: nil)
@@ -35,8 +40,30 @@ class WebViewController: UIViewController {
         webView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         webView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
         let request = URLRequest(url: url)
         webView.load(request)
+        
+        let canGoBackObservation = webView.observe(\.canGoBack, options: [.new]) { [weak self] (_webView, changed) in
+            guard let _canGoBack = changed.newValue else {
+                return
+            }
+            DispatchQueue.main.async {
+                self?.backButton.isEnabled = _canGoBack
+                self?.view.layoutIfNeeded()
+            }
+        }
+        
+        let canGoForwardObservation = webView.observe(\.canGoForward, options: [.new]) { [weak self] (_webView, changed) in
+            guard let _canGoForward = changed.newValue else {
+                return
+            }
+            DispatchQueue.main.async {
+                self?.forwardButton.isEnabled = _canGoForward
+                self?.view.layoutIfNeeded()
+            }
+        }
+        observations = [canGoBackObservation, canGoForwardObservation]
     }
     
     func createToolbar() -> UIToolbar {
@@ -52,11 +79,10 @@ class WebViewController: UIViewController {
         toolbar.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         toolbar.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
-        let backButton = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector(back))
-        let forwardButton = UIBarButtonItem(title: ">", style: .plain, target: self, action: #selector(forward))
-        let openWithSafari = UIBarButtonItem(title: "Safariで開く", style: .plain, target: self, action: #selector(safari))
-        
-        toolbar.items = [backButton, forwardButton, openWithSafari]
+        toolbar.items = [backButton, forwardButton, openWithSafari].map { (button) -> UIBarButtonItem in
+            button.isEnabled = false
+            return button
+        }
         
         return toolbar
     }
