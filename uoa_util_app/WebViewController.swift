@@ -78,11 +78,9 @@ class WebViewController: UIViewController {
         toolbar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         toolbar.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         toolbar.heightAnchor.constraint(equalToConstant: 80).isActive = true
-        
-        toolbar.items = [backButton, forwardButton, openWithSafari].map { (button) -> UIBarButtonItem in
-            button.isEnabled = false
-            return button
-        }
+        backButton.isEnabled = false
+        forwardButton.isEnabled = false
+        toolbar.items = [backButton, forwardButton, openWithSafari]
         
         return toolbar
     }
