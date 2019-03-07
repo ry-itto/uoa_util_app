@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BF296FA5222D6D2000A6A605 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF296FA4222D6D2000A6A605 /* AppDelegate.swift */; };
-		BF296FA7222D6D2000A6A605 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF296FA6222D6D2000A6A605 /* ViewController.swift */; };
 		BF296FAC222D6D2300A6A605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF296FAB222D6D2300A6A605 /* Assets.xcassets */; };
 		BF296FAF222D6D2300A6A605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF296FAD222D6D2300A6A605 /* LaunchScreen.storyboard */; };
 		BF296FB8222D749700A6A605 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF296FB7222D749700A6A605 /* WebKit.framework */; };
@@ -16,12 +15,14 @@
 		BF296FBC222D7A2300A6A605 /* CampusWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF296FBB222D7A2300A6A605 /* CampusWebViewController.swift */; };
 		BF296FC1222FA91500A6A605 /* ClassScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF296FBF222FA91500A6A605 /* ClassScheduleViewController.swift */; };
 		BF296FC2222FA91500A6A605 /* ClassScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF296FC0222FA91500A6A605 /* ClassScheduleViewController.xib */; };
+		BF296FC8223136B500A6A605 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF296FC6223136B400A6A605 /* Kanna.framework */; };
+		BF296FC9223136B500A6A605 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF296FC7223136B500A6A605 /* Alamofire.framework */; };
+		BF296FCD22313C6300A6A605 /* ClassURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF296FCC22313C6300A6A605 /* ClassURLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF296FA1222D6D2000A6A605 /* uoa_util_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uoa_util_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF296FA4222D6D2000A6A605 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF296FA6222D6D2000A6A605 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF296FAB222D6D2300A6A605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF296FAE222D6D2300A6A605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF296FB0222D6D2300A6A605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -30,6 +31,9 @@
 		BF296FBB222D7A2300A6A605 /* CampusWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusWebViewController.swift; sourceTree = "<group>"; };
 		BF296FBF222FA91500A6A605 /* ClassScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleViewController.swift; sourceTree = "<group>"; };
 		BF296FC0222FA91500A6A605 /* ClassScheduleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassScheduleViewController.xib; sourceTree = "<group>"; };
+		BF296FC6223136B400A6A605 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
+		BF296FC7223136B500A6A605 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		BF296FCC22313C6300A6A605 /* ClassURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassURLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF296FC8223136B500A6A605 /* Kanna.framework in Frameworks */,
+				BF296FC9223136B500A6A605 /* Alamofire.framework in Frameworks */,
 				BF296FB8222D749700A6A605 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,15 +70,12 @@
 		BF296FA3222D6D2000A6A605 /* uoa_util_app */ = {
 			isa = PBXGroup;
 			children = (
+				BF296FCB2231388B00A6A605 /* Models */,
+				BF296FC5223103D500A6A605 /* Views */,
 				BF296FA4222D6D2000A6A605 /* AppDelegate.swift */,
-				BF296FA6222D6D2000A6A605 /* ViewController.swift */,
 				BF296FAB222D6D2300A6A605 /* Assets.xcassets */,
 				BF296FAD222D6D2300A6A605 /* LaunchScreen.storyboard */,
 				BF296FB0222D6D2300A6A605 /* Info.plist */,
-				BF296FB9222D74B500A6A605 /* WebViewController.swift */,
-				BF296FBB222D7A2300A6A605 /* CampusWebViewController.swift */,
-				BF296FBF222FA91500A6A605 /* ClassScheduleViewController.swift */,
-				BF296FC0222FA91500A6A605 /* ClassScheduleViewController.xib */,
 			);
 			path = uoa_util_app;
 			sourceTree = "<group>";
@@ -80,9 +83,30 @@
 		BF296FB6222D749700A6A605 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF296FC7223136B500A6A605 /* Alamofire.framework */,
+				BF296FC6223136B400A6A605 /* Kanna.framework */,
 				BF296FB7222D749700A6A605 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF296FC5223103D500A6A605 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF296FB9222D74B500A6A605 /* WebViewController.swift */,
+				BF296FBB222D7A2300A6A605 /* CampusWebViewController.swift */,
+				BF296FBF222FA91500A6A605 /* ClassScheduleViewController.swift */,
+				BF296FC0222FA91500A6A605 /* ClassScheduleViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF296FCB2231388B00A6A605 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF296FCC22313C6300A6A605 /* ClassURLs.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +119,7 @@
 				BF296F9D222D6D2000A6A605 /* Sources */,
 				BF296F9E222D6D2000A6A605 /* Frameworks */,
 				BF296F9F222D6D2000A6A605 /* Resources */,
+				BF296FCA223137AC00A6A605 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -151,15 +176,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BF296FCA223137AC00A6A605 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF296F9D222D6D2000A6A605 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF296FA7222D6D2000A6A605 /* ViewController.swift in Sources */,
 				BF296FC1222FA91500A6A605 /* ClassScheduleViewController.swift in Sources */,
 				BF296FBA222D74B500A6A605 /* WebViewController.swift in Sources */,
 				BF296FA5222D6D2000A6A605 /* AppDelegate.swift in Sources */,
+				BF296FCD22313C6300A6A605 /* ClassURLs.swift in Sources */,
 				BF296FBC222D7A2300A6A605 /* CampusWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -300,6 +348,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFY27HWN2G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = uoa_util_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -318,6 +370,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFY27HWN2G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = uoa_util_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
