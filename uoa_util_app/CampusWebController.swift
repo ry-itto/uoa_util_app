@@ -8,14 +8,14 @@
 
 import UIKit
 
-class CampusWebController: WebViewController {
-    static func createWithTabBarItem() -> CampusWebController {
+class CampusWebViewController: WebViewController {
+    static func createWithTabBarItem() -> CampusWebViewController {
         
         guard let url = URL.init(string: "https://csweb.u-aizu.ac.jp/campusweb/campussmart.do?locale=ja_JP") else {
             assert(false)
         }
         
-        let viewController = CampusWebController(url: url)
+        let viewController = CampusWebViewController(url: url)
         viewController.tabBarItem = UITabBarItem(title: "学務システム", image: UIImage(named: "CampusSquare"), tag: 0)
         return viewController
     }

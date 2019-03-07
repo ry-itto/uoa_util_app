@@ -13,7 +13,9 @@
 		BF296FAF222D6D2300A6A605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF296FAD222D6D2300A6A605 /* LaunchScreen.storyboard */; };
 		BF296FB8222D749700A6A605 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF296FB7222D749700A6A605 /* WebKit.framework */; };
 		BF296FBA222D74B500A6A605 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF296FB9222D74B500A6A605 /* WebViewController.swift */; };
-		BF296FBC222D7A2300A6A605 /* CampusWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF296FBB222D7A2300A6A605 /* CampusWebController.swift */; };
+		BF296FBC222D7A2300A6A605 /* CampusWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF296FBB222D7A2300A6A605 /* CampusWebViewController.swift */; };
+		BF296FC1222FA91500A6A605 /* ClassScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF296FBF222FA91500A6A605 /* ClassScheduleViewController.swift */; };
+		BF296FC2222FA91500A6A605 /* ClassScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF296FC0222FA91500A6A605 /* ClassScheduleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,9 @@
 		BF296FB0222D6D2300A6A605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF296FB7222D749700A6A605 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BF296FB9222D74B500A6A605 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		BF296FBB222D7A2300A6A605 /* CampusWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusWebController.swift; sourceTree = "<group>"; };
+		BF296FBB222D7A2300A6A605 /* CampusWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusWebViewController.swift; sourceTree = "<group>"; };
+		BF296FBF222FA91500A6A605 /* ClassScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleViewController.swift; sourceTree = "<group>"; };
+		BF296FC0222FA91500A6A605 /* ClassScheduleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassScheduleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,9 @@
 				BF296FAD222D6D2300A6A605 /* LaunchScreen.storyboard */,
 				BF296FB0222D6D2300A6A605 /* Info.plist */,
 				BF296FB9222D74B500A6A605 /* WebViewController.swift */,
-				BF296FBB222D7A2300A6A605 /* CampusWebController.swift */,
+				BF296FBB222D7A2300A6A605 /* CampusWebViewController.swift */,
+				BF296FBF222FA91500A6A605 /* ClassScheduleViewController.swift */,
+				BF296FC0222FA91500A6A605 /* ClassScheduleViewController.xib */,
 			);
 			path = uoa_util_app;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 			files = (
 				BF296FAF222D6D2300A6A605 /* LaunchScreen.storyboard in Resources */,
 				BF296FAC222D6D2300A6A605 /* Assets.xcassets in Resources */,
+				BF296FC2222FA91500A6A605 /* ClassScheduleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF296FA7222D6D2000A6A605 /* ViewController.swift in Sources */,
+				BF296FC1222FA91500A6A605 /* ClassScheduleViewController.swift in Sources */,
 				BF296FBA222D74B500A6A605 /* WebViewController.swift in Sources */,
 				BF296FA5222D6D2000A6A605 /* AppDelegate.swift in Sources */,
-				BF296FBC222D7A2300A6A605 /* CampusWebController.swift in Sources */,
+				BF296FBC222D7A2300A6A605 /* CampusWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
